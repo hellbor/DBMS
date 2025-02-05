@@ -1,7 +1,7 @@
 USE PV_319_DDL;
 GO
 
-CREATE TABLE Shedule
+CREATE TABLE Schedule
 (
 	lesson_id	BIGINT			PRIMARY KEY,
 	date		DATE			NOT NULL,

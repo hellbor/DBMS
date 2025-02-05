@@ -4,7 +4,7 @@ GO
 CREATE TABLE Grades
 (
 	student		INT,
-	lesson		INT,
+	lesson		BIGINT,
 	present		BIT			NULL,
 	grade_1		TINYINT		NULL,
 	grade_2		TINYINT		NULL,
