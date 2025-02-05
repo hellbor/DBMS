@@ -13,7 +13,7 @@ GO
 --	teacher		INT,
 --	discipline	SMALLINT,
 --	PRIMARY KEY(teacher,discipline),
---	CONSTRAINT FK_TDR_teacher_2_Teachers		FOREIGN KEY (teacher)	REFERENCES Teachers(teacher_id),
+--	CONSTRAINT FK_TDR_teacher_2_Teachers		FOREIGN KEY (teacher)		REFERENCES Teachers(teacher_id),
 --	CONSTRAINT FK_TDR_discipline				FOREIGN KEY (discipline)	REFERENCES Disciplines(discipline_id)
 --);
 
