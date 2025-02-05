@@ -11,7 +11,7 @@ CREATE TABLE Schedule
 	[group]		INT				NOT NULL,
 	teacher		INT				NOT NULL,
 	discipline	SMALLINT		NOT NULL,
-	CONSTRAINT FK_S_lesson_2_Teachers			FOREIGN KEY(teacher)		REFERENCES Teachers(teacher_id),
-	CONSTRAINT FK_S_lesson_2_Groups				FOREIGN KEY([group])		REFERENCES Groups(group_id),
-	CONSTRAINT FK_S_lesson_2_Disciplines		FOREIGN KEY(discipline)		REFERENCES Disciplines(discipline_id)
+	CONSTRAINT FK_S_lesson_2_Teachers		FOREIGN KEY(teacher)	REFERENCES Teachers(teacher_id),
+	CONSTRAINT FK_S_lesson_2_Groups			FOREIGN KEY([group])	REFERENCES Groups(group_id),
+	CONSTRAINT FK_S_lesson_2_Disciplines	FOREIGN KEY(discipline)	REFERENCES Disciplines(discipline_id)
 );
