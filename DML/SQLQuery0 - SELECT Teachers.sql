@@ -1,9 +1,9 @@
-USE PV_319_DDL;
+п»їUSE PV_319_DDL;
 GO
 
 SELECT
-			last_name + ' ' + first_name + ' ' + middle_name AS N'Ф.И.О. преподавателя',
-			birth_date		AS N'Дата рождения'
-			--discipline		AS N'Дисциплина'
+			last_name + ' ' + first_name + ' ' + middle_name AS N'Р¤.Р.Рћ. РїСЂРµРїРѕРґР°РІР°С‚РµР»СЏ',
+			birth_date		AS N'Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ'
+			--discipline		AS N'Р”РёСЃС†РёРїР»РёРЅР°'
 FROM		Teachers
 ORDER BY	last_name
