@@ -1,4 +1,4 @@
-USE PV_319_Import;
+п»їUSE PV_319_Import;
 GO
 
 SET DATEFIRST 1;
@@ -7,13 +7,13 @@ SET DATEFIRST 1;
 --SELECT * FROM Schedule;
 
 SELECT
-		[Группа]		=	group_name,
-		[Дисциплина]	=	discipline_name,
-		[Преподаватель] =	FORMATMESSAGE(N'%s %s %s', last_name, first_name, middle_name),
-		[День]			=	DATENAME(WEEKDAY, [date]),
-		[Дата]			=	[date],
-		[Время]			=	[time],
-		[Статус]		=	IIF(spent=1, N'Проведено', 'Запланировано')
+		[Р“СЂСѓРїРїР°]		=	group_name,
+		[Р”РёСЃС†РёРїР»РёРЅР°]	=	discipline_name,
+		[РџСЂРµРїРѕРґР°РІР°С‚РµР»СЊ] =	FORMATMESSAGE(N'%s %s %s', last_name, first_name, middle_name),
+		[Р”РµРЅСЊ]			=	DATENAME(WEEKDAY, [date]),
+		[Р”Р°С‚Р°]			=	[date],
+		[Р’СЂРµРјСЏ]			=	[time],
+		[РЎС‚Р°С‚СѓСЃ]		=	IIF(spent=1, N'РџСЂРѕРІРµРґРµРЅРѕ', 'Р—Р°РїР»Р°РЅРёСЂРѕРІР°РЅРѕ')
 FROM	Schedule, Groups, Disciplines, Teachers
 WHERE	[group]			=	group_id
 AND		discipline		=	discipline_id
