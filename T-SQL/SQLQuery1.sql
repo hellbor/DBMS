@@ -1,0 +1,1 @@
+SELECT group_id			FROM Groups			WHERE group_name = N'PV_319'
