@@ -13,7 +13,7 @@ BEGIN
 
 	DECLARE
 	@date	AS	DATE = @start_date,
-	@day	AS	TINYINT = 1;
+	@day	AS	TINYINT = 0;
 	WHILE @day < @duration
 	BEGIN
 		INSERT	DaysOFF
