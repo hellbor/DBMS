@@ -2,10 +2,11 @@ USE PV_319_Import;
 SET DATEFIRST 1;
 GO
 
-EXEC sp_AddHolidays 2025, N'Майские%'
+EXEC sp_AddAllHolidaysFor 2025;
 
 SELECT
 		[Дата]		=	[date],
 		[Праздник]	=	holiday_name
 FROM	DaysOFF, Holidays
-WHERE	holiday = holiday_id;
+WHERE	holiday = holiday_id
+ORDER BY [date];

@@ -7,7 +7,7 @@ ALTER PROCEDURE sp_AddHolidays
 @name	AS		NVARCHAR(150)
 AS
 BEGIN
-	DECLARE @start_date	AS DATE		= dbo.GetHolidaysStartDay(@name, @year);
+	DECLARE @start_date	AS DATE		= dbo.GetHolidaysStartDate(@name, @year);
 	DECLARE @duration	AS TINYINT	= dbo.GetHolidayDuration(@name);
 	DECLARE @holiday_id	AS TINYINT	= dbo.GetHolidayID(@name);
 
