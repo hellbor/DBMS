@@ -2,11 +2,11 @@ USE PV_319_Import;
 SET DATEFIRST 1;
 GO
 
---ALTER FUNCTION GetLearningDaysFor(@group_name NVARCHAR(10))RETURNS NVARCHAR(50)
-CREATE PROCEDURE sp_GetLearningDaysFor(@group_name NVARCHAR(10))
+ALTER FUNCTION GetLearningDaysFor(@group_name NVARCHAR(10))RETURNS NVARCHAR(50)
+--ALTER PROCEDURE sp_GetLearningDaysFor(@group_name NVARCHAR(10))
 AS
 BEGIN
-	PRINT @group_name;
+	--PRINT @group_name;
 	DECLARE
 	@week	AS	TABLE(id TINYINT, [day] NVARCHAR(50));
 	INSERT	@week
@@ -20,12 +20,12 @@ BEGIN
 			(5, N'бс'),
 			(6, N'Тё')
 			;
-			SELECT * FROM @week;
+--			SELECT * FROM @week;
 	DECLARE
 	@mask	AS	TINYINT			=	(SELECT weekdays FROM Groups WHERE group_name = @group_name),
 	@days	AS	NVARCHAR(50)	=	N'';
 
-	PRINT @mask;
+--	PRINT @mask;
 
 	DECLARE
 	@day	AS	TINYINT = 0;
@@ -39,5 +39,5 @@ BEGIN
 		--PRINT @day;
 	END
 
-	PRINT @days;
+	RETURN @days;
 END
