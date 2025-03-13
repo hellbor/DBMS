@@ -11,9 +11,12 @@ GO
 --PRINT(dbo.GetHolidayDuration(N'Летние%'));
 
 --PRINT('---------------------------------------')
-DECLARE @holiday AS NVARCHAR(150) = N'Пас%';
+--DECLARE @holiday AS NVARCHAR(150) = N'Пас%';
 --EXEC sp_GetHolidaysStartDate 2025;
-PRINT(dbo.GetHolidaysStartDate(N'Пас%', 2025));
-PRINT(dbo.GetEasterDate(2025));
+--PRINT(dbo.GetHolidaysStartDate(N'Пас%', 2025));
+--PRINT(dbo.GetEasterDate(2025));
 --SELECT holiday_name FROM Holidays WHERE holiday_name LIKE @holiday;
 --PRINT(dbo.GetEasterDate(2025));
+PRINT(dbo.GetLastDateForGroup(N'PV_319'));
+--DECLARE @date AS DATE = (SELECT MAX([date]) FROM Schedule WHERE [group] = dbo.GetGroupID(N'PV_319'));
+--PRINT(@date);
